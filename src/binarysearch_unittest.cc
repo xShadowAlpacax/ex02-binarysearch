@@ -117,12 +117,13 @@ namespace {
         Value<uint64_t> find(10);
         int64_t index = binarysearch(find, values, 10);
         ASSERT_EQ(9, index);
+        _testScore += 4;
+
         long visited = std::count_if(values, values+10, [&] (const Value<uint64_t> &v) {
             return v.visited;
         });
         ASSERT_GE(4, visited);
-
-        _testScore += 6;
+        _testScore += 4;
     }
 
 }  // namespace
