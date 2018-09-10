@@ -48,8 +48,6 @@ and then copy the content into the files.
 In CLion in the project explorer, right-click the `include` directory
 and chose `New => C++ Header File`. 
 
-![Adding source file](https://github.com/sbcc-cs140-fall2018/Course-Information/wiki/images/03_new_source_file.png)
-
 Under **Name** fill in
 binarysearch. CLion will add the extension, but by default 
 adds the `.h` extension. You should now see the file `binarysearch.h` in
@@ -62,10 +60,8 @@ Properly set up the namespaces and declare the function described above in this 
 In CLion in the project explorer, right-click the `src` directory
 and chose `New => C++ Source File`. 
 
-![Adding source file](https://github.com/sbcc-cs140-fall2018/Course-Information/wiki/images/03_new_source_file.png)
-
 Under **Name** fill in
-binarysearch, or whatever name you want to give it. CLion will add the extension, but by default 
+binarysearch , or whatever name you want to give it. CLion will add the extension, but by default 
 adds the `.cpp` extension. All projects in this class will
 use the `.cc` extension. Select `.cc` in the **Type** drop-down
 and press **OK**. You should now see the file `binarysearch.cc`, or whatever you called it, in
