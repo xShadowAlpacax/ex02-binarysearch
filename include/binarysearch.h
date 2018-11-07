@@ -1,27 +1,37 @@
+/*                                                                                                          */
+/* CS V15 Data Structures and Algorithms                                                                    */
+/* CRN: ?????                                                                                               */
+/* Assignment: Binary search                                                                                */
+/*                                                                                                          */
+/* Statement of code ownership: I hereby state that I have written all of this                              */
+/* code and I have not copied this code from any other person or source.                                    */
+/*                                                                                                          */
+/* @author Jack Sherlock                                                                                    */
+/*                                                                                                          */
+
 #include <iostream>
+#include <cstdint>
 
 using std::cout;
 using std::cout;
 
 namespace edu { namespace vcccd { namespace vc {namespace csv15 {
 	template <class Alpaca>
-	int64_t binarysearch(Alpaca value, Alpaca array[], size_t size) {
+	int64_t binarysearch(const Alpaca& value, Alpaca array[], size_t x) {
+		int left = 0;
+		int right = x - 1;
+		while (left <= right) {
+			int guess = (left + right) / 2;
 
-		if (array == NULL) return -1;
-		if (size == 0) return -1;
-
-		size_t guess = size / 2;
-
-		if (value == array[guess]) {
-			return guess;
-		}
-
-		if (value < array[guess]) {
-			return binarysearch(value, array, guess);
-		}
-
-		else if (value > array[guess]) {
-			return binarysearch(value, array + guess + 1, guess);
+			if (array[guess] == value) {
+				return guess;
+			}
+			else if (array[guess] > value) {
+				right = guess - 1;
+			}
+			else if (array[guess] < value) {
+				left = guess + 1;
+			}
 		}
 		return -1;
 	}
